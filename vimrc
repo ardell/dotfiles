@@ -224,8 +224,8 @@ map <F4> :cprev<CR>
 map <F5> :cclose<CR>
 set nowrap
 set expandtab
-set sw=4  " shift width 
-set ts=4  " tab stop
+set sw=2  " shift width
+set ts=2  " tab stop
 set modelines=10
 " disable bells on ESC and error
 set noeb vb t_vb=
