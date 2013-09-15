@@ -204,9 +204,6 @@ map <C-k> <C-w>k<C-w>80+ " down one window, maximized
 map <C-h> <C-w>80+ " maximize current window
 map <C-i> <C-w>= " all windows equal height
 " for moving between tabs with ease:
-map 7 :tabnew<CR>
-" S-7
-map & :tabclose<CR>
 map 8 :tabprev<CR>
 map 9 :tabnext<CR>
 
