@@ -3,3 +3,6 @@ vim/bundle
 *.sw[op]
 .rvmrc
 .ruby-version
+.ruby-gemset
+node_modules
+
