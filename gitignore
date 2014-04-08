@@ -5,4 +5,5 @@ vim/bundle
 .ruby-version
 .ruby-gemset
 node_modules
+.rspec
 
