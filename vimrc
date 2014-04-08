@@ -359,6 +359,8 @@ function! DoLint()
     execute ":!/usr/bin/php -l % | head -20"
   elseif &filetype == 'coffee'
     execute ":!/usr/bin/coffeelint % | head -20"
+  elseif &filetype == 'python'
+    execute ":!venv/bin/python -m py_compile % | head -20"
   else
     echohl ErrorMsg
     echo 'No linter set up for filetype' &filetype
