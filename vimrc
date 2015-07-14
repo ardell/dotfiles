@@ -36,6 +36,7 @@ try
     if executable('ctags')
         Plugin 'taglist.vim'
     endif
+    " Bundle 'vim-scripts/matchit.zip'
     " syntaxes
     Plugin 'actionscript.vim--Leider'
     Plugin 'git://github.com/editorconfig/editorconfig-vim.git'
@@ -52,7 +53,9 @@ try
     Bundle 'git://github.com/kchmck/vim-coffee-script.git'
     Bundle 'git://github.com/nono/vim-handlebars.git'
     Bundle 'git://github.com/tpope/vim-cucumber.git'
+    Bundle 'git://github.com/slim-template/vim-slim.git'
     Bundle 'git://github.com/scrooloose/nerdtree.git'
+    Bundle 'thoughtbot/vim-rspec'
     " ideas for future?
     " Plugin 'http://www.vim.org/scripts/download_script.php?src_id=16015'
     " NOTE: you should also use the solarized terminal theme for this to work correctly: https://github.com/altercation/solarized/tree/master/iterm2-colors-solarized
@@ -156,6 +159,12 @@ nmap <C-\> :tselect<CR>
 
 " Control+N toggles NERDTree 
 map <C-n> :NERDTreeToggle<CR>
+
+" RSpec.vim mappings
+map <C-t> :call RunCurrentSpecFile()<CR>
+map <C-s> :call RunNearestSpec()<CR>
+map <C-l> :call RunLastSpec()<CR>
+map <C-a> :call RunAllSpecs()<CR>
 
 " I don't understand vundle enough quite yet; even though Bundle 'Align' is above, exists(":AlignCtrl") never passed during .vimrc
 " So to hack around this for now I lazy-config Align otf.
@@ -350,7 +359,12 @@ endfunction " InsertCloseTag()
 " Map ; to run linter for file type
 function! DoLint()
   if &filetype == 'javascript'
-    execute ":!jslint %"
+    " find the next non-closing tag (in the appropriate direction), note where
+    " it is (in mark j) in case this function gets called again, then yank it
+    " and paste a copy at the original cursor position, and store the final
+    " cursor position (in mark i) for use next time round:
+    execute ":!jslint -process % | head -20"
+
   elseif &filetype == 'xml'
     execute ":!xmllint -format % | head -20"
   elseif &filetype == 'ruby' || &filetype == 'rb'
