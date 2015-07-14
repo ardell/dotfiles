@@ -1,9 +1,29 @@
+# OS X
 .DS_Store
+
+# vim
 vim/bundle
-*.sw[op]
+*.sw[opn]
+
+# Ruby
 .rvmrc
 .ruby-version
 .ruby-gemset
-node_modules
 .rspec
+.env
+
+# Javascript
+node_modules
+
+# Xcode
+*.pbxuser
+*.mode1v3
+*.mode2v3
+*.perspectivev3
+*.xcuserstate
+project.xcworkspace/
+xcuserdata/
+
+# Python
+venv
 
