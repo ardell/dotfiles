@@ -25,6 +25,7 @@
   whitespace = trailing-space,space-before-tab,tab-in-indent
   autocrlf = false
   savecrlf = true
+  editor = "vi"
   pager = tee
 [push]
   default = current
