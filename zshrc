@@ -171,6 +171,9 @@ fi
 # override with local settings
 source ~/.zshrc.local
 
+# Added when installing Laravel
+export PATH="$PATH:$HOME/.composer/vendor/bin" # Add composer (php) executables to path
+
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/bin:/usr/local/heroku/bin:$PATH"
 
