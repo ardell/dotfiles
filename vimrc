@@ -50,6 +50,7 @@ try
     Bundle 'git://github.com/godlygeek/tabular.git'
     Bundle 'git://github.com/nono/vim-handlebars.git'
     Bundle 'git://github.com/tpope/vim-cucumber.git'
+    Bundle 'git://github.com/elixir-lang/vim-elixir.git'
     Bundle 'git://github.com/slim-template/vim-slim.git'
     Bundle 'git://github.com/scrooloose/nerdtree.git'
     Bundle 'thoughtbot/vim-rspec'
