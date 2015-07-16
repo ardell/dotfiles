@@ -46,11 +46,8 @@ try
     let g:syntastic_javascript_checkers = [ "" ]
     let g:syntastic_javascript_closure_compiler_path = "/usr/lib64/ruby/gems/1.9.1/gems/closure-compiler-1.1.10/lib/closure-compiler-20130411.jar"
     Plugin 'scrooloose/syntastic'
-    Bundle 'actionscript.vim--Leider'
     Bundle 'git://github.com/tpope/vim-haml.git'
-    Bundle 'git://github.com/motemen/git-vim.git'
     Bundle 'git://github.com/godlygeek/tabular.git'
-    Bundle 'git://github.com/kchmck/vim-coffee-script.git'
     Bundle 'git://github.com/nono/vim-handlebars.git'
     Bundle 'git://github.com/tpope/vim-cucumber.git'
     Bundle 'git://github.com/slim-template/vim-slim.git'
