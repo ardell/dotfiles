@@ -37,6 +37,9 @@ alias -s pdf="open -a Preview"
 alias xdebug-on='export XDEBUG_CONFIG="remote_enable=1"'
 alias xdebug-off='unset XDEBUG_CONFIG'
 
+# Don't break rake arguments
+unsetopt nomatch
+
 # Prompts: see http://aperiodic.net/phil/prompt/
 setopt prompt_subst
 autoload -U colors
